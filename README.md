@@ -1,13 +1,14 @@
-# HTTP STATUS CODES HELPER in PHP
-[HTTP Status Codes](https://httpstatuses.com/) helper for PHP projects based on 
+# HTTP's status codes helper functions in PHP
+[HTTP Status Codes](https://httpstatuses.com/) helper for PHP projects
 
 
 ## Usage
-
-If you want to show the code for the following description
+If you want to show the code for the following message
 ```php
 use CodingMatters\Http\StatusCode;
+
 StatusCode::FORBIDDEN; // returns 403
+StatusCode::CREATED; // returns 201
 ```
 
 
@@ -15,93 +16,83 @@ StatusCode::FORBIDDEN; // returns 403
 
 ### Informational
 ```php
-use CodingMatters\Http\StatusCode;
-
-StatusCode::CONTINUE;
-StatusCode::SWITCHING_PROTOCOL;
-StatusCode::PROCESSING;
+StatusCode::CONTINUE; // 100
+StatusCode::SWITCHING_PROTOCOL; // 101
+StatusCode::PROCESSING; // 102
 ```
 
 ### Successful
 ```php
-use CodingMatters\Http\StatusCode;
-
-StatusCode::OK;
-StatusCode::CREATED;
-StatusCode::ACCEPTED;
-StatusCode::NON_AUTHORITATIVE_INFORMATION;
-StatusCode::NO_CONTENT;
-StatusCode::RESET_CONTENT;
-StatusCode::PARTIAL_CONTENT;
-StatusCode::MULTI_STATUS;
-StatusCode::ALREADY_REPORTED;
-StatusCode::IM_USED;
+StatusCode::OK; // 200
+StatusCode::CREATED; // 201
+StatusCode::ACCEPTED; // 202
+StatusCode::NON_AUTHORITATIVE_INFORMATION; // 203
+StatusCode::NO_CONTENT; // 204
+StatusCode::RESET_CONTENT; // 205
+StatusCode::PARTIAL_CONTENT; // 206
+StatusCode::MULTI_STATUS; // 207
+StatusCode::ALREADY_REPORTED; // 208
+StatusCode::IM_USED; // 226
 ```
 
 ### Redirection
 ```php
-use CodingMatters\Http\StatusCode;
-
-StatusCode::MULTIPLE_CHOICES;
-StatusCode::MOVED_PERMANENTLY;
-StatusCode::FOUND;
-StatusCode::SEE_OTHER;
-StatusCode::NOT_MODIFIED;
-StatusCode::USE_PROXY;
-StatusCode::TEMPORARY_REDIRECT;
-StatusCode::PERMANENT_REDIRECT;
+StatusCode::MULTIPLE_CHOICES; // 300
+StatusCode::MOVED_PERMANENTLY; // 301
+StatusCode::FOUND; // 302
+StatusCode::SEE_OTHER; // 303
+StatusCode::NOT_MODIFIED; // 304
+StatusCode::USE_PROXY; // 305
+StatusCode::TEMPORARY_REDIRECT; // 307
+StatusCode::PERMANENT_REDIRECT; // 308
 ```
 
 ### Client Error
 ```php
-use CodingMatters\Http\StatusCode;
-
-StatusCode::BAD_REQUEST;
-StatusCode::UNAUTHORIZED;
-StatusCode::PAYMENT_REQUIRED;
-StatusCode::FORBIDDEN;
-StatusCode::NOT_FOUND;
-StatusCode::METHOD_NOT_ALLOWED;
-StatusCode::NOT_ACCEPTABLE;
-StatusCode::PROXY_AUTHENTICATION_REQUIRED;
-StatusCode::REQUEST_TIMEOUT;
-StatusCode::CONFLICT;
-StatusCode::GONE;
-StatusCode::LENGTH_REQUIRED;
-StatusCode::PRECONDITION_FAILED;
-StatusCode::PAYLOAD_TOO_LARGE;
-StatusCode::REQUEST_URI_TOO_LONG;
-StatusCode::UNSUPPORTED_MEDIA_TYPE;
-StatusCode::REQUESTED_RANGE_NOT_SATISFIABLE;
-StatusCode::EXPECTATION_FAILED;
-StatusCode::IM_A_TEAPOT;
-StatusCode::MISDIRECTED_REQUEST;
-StatusCode::UNPROCESSABLE_ENTITY;
-StatusCode::LOCKED;
-StatusCode::FAILED_DEPENDENCY;
-StatusCode::UPGRADE_REQUIRED;
-StatusCode::PRECONDITION_REQUIRED;
-StatusCode::TOO_MANY_REQUEST;
-StatusCode::REQUEST_HEADER_FIELDS_TOO_LARGE;
-StatusCode::CONNECTION_CLOSED_WITHOUT_RESPONSE;
-StatusCode::UNAVAILABLE_FOR_LEGAL_REASONS;
-StatusCode::CLIENT_CLOSED_REQUEST;
+StatusCode::BAD_REQUEST; // 400
+StatusCode::UNAUTHORIZED; // 401
+StatusCode::PAYMENT_REQUIRED; // 402
+StatusCode::FORBIDDEN; // 403
+StatusCode::NOT_FOUND; // 404
+StatusCode::METHOD_NOT_ALLOWED; // 405
+StatusCode::NOT_ACCEPTABLE; // 406
+StatusCode::PROXY_AUTHENTICATION_REQUIRED; // 407
+StatusCode::REQUEST_TIMEOUT; // 408
+StatusCode::CONFLICT; // 409
+StatusCode::GONE; // 410
+StatusCode::LENGTH_REQUIRED; // 411
+StatusCode::PRECONDITION_FAILED; // 412
+StatusCode::PAYLOAD_TOO_LARGE; // 413
+StatusCode::REQUEST_URI_TOO_LONG; // 414
+StatusCode::UNSUPPORTED_MEDIA_TYPE; // 415
+StatusCode::REQUESTED_RANGE_NOT_SATISFIABLE; // 416
+StatusCode::EXPECTATION_FAILED; // 417
+StatusCode::IM_A_TEAPOT; // 418
+StatusCode::MISDIRECTED_REQUEST; // 421
+StatusCode::UNPROCESSABLE_ENTITY; // 422
+StatusCode::LOCKED; // 423
+StatusCode::FAILED_DEPENDENCY; // 424
+StatusCode::UPGRADE_REQUIRED; // 426
+StatusCode::PRECONDITION_REQUIRED; // 428
+StatusCode::TOO_MANY_REQUEST; // 429
+StatusCode::REQUEST_HEADER_FIELDS_TOO_LARGE; // 431
+StatusCode::CONNECTION_CLOSED_WITHOUT_RESPONSE; // 444
+StatusCode::UNAVAILABLE_FOR_LEGAL_REASONS; // 451
+StatusCode::CLIENT_CLOSED_REQUEST; // 499
 ```
 
 ### Server Error
 ```php
-use CodingMatters\Http\StatusCode;
-
-StatusCode::INTERNAL_SERVER_ERROR;
-StatusCode::NOT_IMPLEMENTED;
-StatusCode::BAD_GATEWAY;
-StatusCode::SERVICE_UNAVAILABLE;
-StatusCode::GATEWAY_TIMEOUT;
-StatusCode::HTTP_VERSION_NOT_SUPPORTED;
-StatusCode::VARIANT_ALSO_NEGOTIATES;
-StatusCode::INSUFFICIENT_STORAGE;
-StatusCode::LOOP_DETECTED;
-StatusCode::NOT_EXTENDED;
-StatusCode::NETWORK_AUTHENTICATION_REQUIRED;
-StatusCode::NETWORK_CONNECT_TIMEOUT_ERROR;
+StatusCode::INTERNAL_SERVER_ERROR; // 500
+StatusCode::NOT_IMPLEMENTED; // 501
+StatusCode::BAD_GATEWAY; // 502
+StatusCode::SERVICE_UNAVAILABLE; // 503
+StatusCode::GATEWAY_TIMEOUT; // 504
+StatusCode::HTTP_VERSION_NOT_SUPPORTED; // 505
+StatusCode::VARIANT_ALSO_NEGOTIATES; // 506
+StatusCode::INSUFFICIENT_STORAGE; // 507
+StatusCode::LOOP_DETECTED; // 508
+StatusCode::NOT_EXTENDED; // 510
+StatusCode::NETWORK_AUTHENTICATION_REQUIRED; // 511
+StatusCode::NETWORK_CONNECT_TIMEOUT_ERROR; // 599
 ```
