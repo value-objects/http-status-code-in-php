@@ -1,0 +1,40 @@
+{
+    "name": "codingmatters/http-status-codes",
+    "description": "Http Status Codes helper for PHP projects",
+    "require": {
+        "php": "~7.3.15"
+    },
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Coding Matters Software Development Services",
+            "email": "support@codingmatters.today",
+            "role": "Development Team"
+        },
+        {
+            "name": "Gab Amba",
+            "email": "gab.amba@codingmatters.today"
+        }
+    ],
+    "support": {
+        "email": "support@codingmatters.today"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.1.4",
+        "laminas/laminas-coding-standard": "^2.0.0",
+        "malukenho/mcbumpface": "^1.1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodingMatters\\Http\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CodingMatters\\HttpTest\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox --colors=always"
+    }
+}
