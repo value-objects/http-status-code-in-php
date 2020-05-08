@@ -10,12 +10,6 @@ use CodingMatters\Http\StatusCode;
 StatusCode::FORBIDDEN; // returns 403
 ```
 
-If you want to show the description based on the code
-```php
-use CodingMatters\Http\StatusResponse;
-StatusResponse::CODE_200; // returns "Ok"
-```
-
 
 ## Available helper functions:
 
